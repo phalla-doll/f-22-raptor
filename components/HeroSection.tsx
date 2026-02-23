@@ -58,7 +58,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: "circOut" }}
-          className="font-display text-7xl md:text-[10rem] uppercase tracking-tighter text-white mb-6 glitch-effect leading-[0.85]"
+          className="font-display font-bold text-7xl md:text-[10rem] uppercase tracking-tighter text-white mb-6 glitch-effect leading-[0.85]"
           data-text="AIR SUPERIORITY REDEFINED"
         >
           Air Superiority
