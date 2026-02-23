@@ -1,4 +1,4 @@
-@import url('https://api.fontshare.com/v2/css?f[]=tanker@400&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=nippo@400,500,700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -7,7 +7,7 @@
   --color-deep-charcoal: #0A0A0A;
   --color-tech-blue: #00F0FF;
   
-  --font-display: 'Tanker', sans-serif;
+  --font-display: 'Nippo', sans-serif;
   --font-mono: var(--font-mono);
   --font-sans: var(--font-sans);
 }
