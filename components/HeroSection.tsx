@@ -1,10 +1,12 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { useState, useEffect } from "react";
 
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { scrollY } = useScroll();
+  const backgroundY = useTransform(scrollY, [0, 1000], [0, 300]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -21,7 +23,10 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#0A0A0A]">
       {/* Background Video/Image Placeholder */}
-      <div className="absolute inset-0 z-0 opacity-60">
+      <motion.div 
+        style={{ y: backgroundY }}
+        className="absolute inset-0 z-0 opacity-60"
+      >
         <div 
           className="absolute inset-0 bg-[url('/clipboard-image-1771810708.png')] bg-cover bg-center"
           style={{
@@ -31,7 +36,7 @@ export default function HeroSection() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0A0A0A_100%)]" />
-      </div>
+      </motion.div>
 
       {/* Grid Overlay */}
       <div className="absolute inset-0 z-10 grid-bg opacity-20 pointer-events-none" />
