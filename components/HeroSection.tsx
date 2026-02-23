@@ -21,9 +21,9 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#0A0A0A]">
       {/* Background Video/Image Placeholder */}
-      <div className="absolute inset-0 z-0 opacity-40">
+      <div className="absolute inset-0 z-0 opacity-60">
         <div 
-          className="absolute inset-0 bg-[url('https://picsum.photos/1920/1080')] bg-cover bg-center grayscale mix-blend-overlay"
+          className="absolute inset-0 bg-[url('/clipboard-image-1771810708.png')] bg-cover bg-center"
           style={{
             transform: `scale(1.1) translate(${mousePosition.x * -20}px, ${mousePosition.y * -20}px)`,
             transition: 'transform 0.2s ease-out'
