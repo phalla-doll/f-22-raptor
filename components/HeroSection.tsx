@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -28,12 +29,20 @@ export default function HeroSection() {
         className="absolute inset-0 z-0 opacity-60"
       >
         <div 
-          className="absolute inset-0 bg-[url('/clipboard-image-1771810708.png')] bg-cover bg-center"
+          className="absolute inset-0 overflow-hidden"
           style={{
             transform: `scale(1.1) translate(${mousePosition.x * -20}px, ${mousePosition.y * -20}px)`,
             transition: 'transform 0.2s ease-out'
           }}
-        />
+        >
+          <Image
+            src="/clipboard-image-1771810708.png"
+            alt="F-22 Raptor Background"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0A0A0A_100%)]" />
       </motion.div>
