@@ -4,17 +4,20 @@ import Image from "next/image";
 
 export default function ModelViewer() {
   return (
-    <div className="w-full h-[600px] relative flex items-center justify-center overflow-hidden">
+    <div className="w-full h-[600px] relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0A0A] z-10 pointer-events-none" />
       
-      <div className="relative w-full h-full max-w-5xl mx-auto">
-        <Image
-          src="/clipboard-image-1771811555.png"
-          alt="F-22 Raptor Schematic"
-          fill
-          className="object-contain p-8"
-          priority
-        />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative w-full h-full max-w-5xl">
+          <Image
+            src="/clipboard-image-1771811555.png"
+            alt="F-22 Raptor Schematic"
+            fill
+            className="object-contain p-8"
+            priority
+            sizes="(max-width: 768px) 100vw, 80vw"
+          />
+        </div>
       </div>
       
       {/* Overlay UI */}
