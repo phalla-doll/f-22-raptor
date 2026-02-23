@@ -58,7 +58,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: "circOut" }}
-          className="font-display text-6xl md:text-9xl uppercase tracking-tighter text-white mb-6 glitch-effect"
+          className="font-display text-7xl md:text-[10rem] uppercase tracking-tighter text-white mb-6 glitch-effect leading-[0.85]"
           data-text="AIR SUPERIORITY REDEFINED"
         >
           Air Superiority
@@ -72,19 +72,19 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="flex flex-col md:flex-row gap-8 items-center font-mono text-sm md:text-base text-gray-400 tracking-widest uppercase"
+          className="flex flex-col md:flex-row gap-12 items-center font-mono text-lg md:text-xl text-gray-400 tracking-widest uppercase"
         >
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-neo-orange" />
-            Stealth
+          <div className="flex items-center gap-3">
+            <span className="w-3 h-3 bg-neo-orange animate-pulse" />
+            <span className="text-white">Stealth</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-neo-orange" />
-            Supercruise
+          <div className="flex items-center gap-3">
+            <span className="w-3 h-3 bg-neo-orange animate-pulse delay-75" />
+            <span className="text-white">Supercruise</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-neo-orange" />
-            Thrust Vectoring
+          <div className="flex items-center gap-3">
+            <span className="w-3 h-3 bg-neo-orange animate-pulse delay-150" />
+            <span className="text-white">Thrust Vectoring</span>
           </div>
         </motion.div>
 

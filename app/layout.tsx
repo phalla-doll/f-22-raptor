@@ -25,6 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jetbrainsMono.variable} ${inter.variable}`}>
       <body className="bg-[#0A0A0A] text-white antialiased selection:bg-[#FF5A00] selection:text-black" suppressHydrationWarning>
+        <div className="noise-bg" />
+        <div className="scanline" />
         {children}
       </body>
     </html>

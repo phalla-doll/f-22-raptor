@@ -22,16 +22,16 @@ function StatCard({ stat, index }: { stat: typeof stats[0]; index: number }) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="relative group"
     >
-      <div className="absolute inset-0 bg-white/5 transform skew-x-[-10deg] group-hover:bg-neo-orange/10 transition-colors duration-300 border border-white/10 group-hover:border-neo-orange/50" />
+      <div className="absolute inset-0 bg-white/5 transform skew-x-[-10deg] group-hover:bg-neo-orange transition-colors duration-300 border border-white/10 group-hover:border-neo-orange" />
       <div className="relative p-8 transform skew-x-[-10deg]">
         <div className="transform skew-x-[10deg]">
-          <div className="font-mono text-neo-orange text-xs mb-2 tracking-widest uppercase">{stat.label}</div>
+          <div className="font-mono text-neo-orange text-xs mb-2 tracking-widest uppercase group-hover:text-black font-bold">{stat.label}</div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-5xl md:text-6xl text-white">{stat.value}</span>
-            <span className="font-mono text-sm text-gray-400">{stat.unit}</span>
+            <span className="font-display text-5xl md:text-7xl text-white group-hover:text-black transition-colors duration-300">{stat.value}</span>
+            <span className="font-mono text-sm text-gray-400 group-hover:text-black/70">{stat.unit}</span>
           </div>
-          <div className="h-px w-full bg-white/10 my-4 group-hover:bg-neo-orange/30 transition-colors" />
-          <p className="font-sans text-sm text-gray-400 leading-relaxed">
+          <div className="h-px w-full bg-white/10 my-4 group-hover:bg-black/20 transition-colors" />
+          <p className="font-sans text-sm text-gray-400 leading-relaxed group-hover:text-black/80 font-medium">
             {stat.desc}
           </p>
         </div>
